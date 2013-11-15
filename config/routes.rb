@@ -1,4 +1,21 @@
 SushiRawrStore::Application.routes.draw do
+
+  root :to => 'info#index'
+  #URL - loads index action of the info controller
+
+  match 'menu' => 'info#menu', :as => 'menu'
+  #URL - loads menu action of the info controlle
+
+  match 'about' => 'info#about', :as => 'about'
+  #URL - loads about action of the info controller
+
+  match 'contact' => 'info#contact', :as => 'contact'
+  #URL - loads contact action of the info controller
+
+  match 'review' => 'info#review', :as => 'review'
+  #URL - loads review action of the info controller
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
