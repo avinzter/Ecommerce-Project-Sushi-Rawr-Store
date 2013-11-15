@@ -1,6 +1,6 @@
 SushiRawrStore::Application.routes.draw do
 
-  root :to => 'info#index'
+  root :to => 'info#index', :as => 'index'
   #URL - loads index action of the info controller
 
   match 'menu' => 'info#menu', :as => 'menu'
