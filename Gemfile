@@ -7,6 +7,12 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
+#gem for active admin
+gem 'activeadmin'
+#gem 'sass-rails'
+gem "meta_search", '>= 1.1.0.pre'
+gem 'jquery-ui-rails'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +27,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

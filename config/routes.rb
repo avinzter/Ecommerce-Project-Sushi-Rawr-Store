@@ -1,18 +1,23 @@
 SushiRawrStore::Application.routes.draw do
 
-  root :to => 'info#index', :as => 'index'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  #devise_for :admin_users, ActiveAdmin::Devise.config, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  #root :to => 'info#index', :as => 'index'
   #URL - loads index action of the info controller
 
-  match 'menu' => 'info#menu', :as => 'menu'
+  #match 'menu' => 'info#menu', :as => 'menu'
   #URL - loads menu action of the info controlle
 
-  match 'about' => 'info#about', :as => 'about'
+  #match 'about' => 'info#about', :as => 'about'
   #URL - loads about action of the info controller
 
-  match 'contact' => 'info#contact', :as => 'contact'
+  #match 'contact' => 'info#contact', :as => 'contact'
   #URL - loads contact action of the info controller
 
-  match 'review' => 'info#review', :as => 'review'
+  #match 'review' => 'info#review', :as => 'review'
   #URL - loads review action of the info controller
 
 
