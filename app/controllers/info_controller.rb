@@ -1,6 +1,7 @@
 class InfoController < ApplicationController
 
 	def index
+		@product = Product.all 
 	end
 	#Loads the app/view/info/index.html.erb
 
