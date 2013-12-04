@@ -22,6 +22,7 @@ class InfoController < ApplicationController
 	#Loads the app/view/info/menu.html.erb
 
 	def search
+		@products = Product.where(category_id = params[:category_id])
 	end
 
 	def search_results
