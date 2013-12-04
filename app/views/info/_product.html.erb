@@ -14,7 +14,7 @@
 			<%= form_tag checkout_path do %>
 				<%= hidden_field_tag :product_id, product.id %>
 				<% label_tag 'Quantity: '%>
-				<%= text_field_tag :quantity, " ", :size => '1' %>
+				<%= text_field_tag :quantity, " ", :size => '2' %>
 				<%= submit_tag 'Add To Cart', :class => 'add_to_cart' %>
 			<% end %>
 		</div>

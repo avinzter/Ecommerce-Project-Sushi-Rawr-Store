@@ -50,7 +50,7 @@ class InfoController < ApplicationController
 		if request.post?
 			product = Product.find(params[:product_id])
 			line_item = LineItem.new
-			#line_item.product_id = product.id
+			line_item.product_id = params[:product_id]
 			line_item.quantity = params[:quantity]
 			line_item.price = product.product_price
 			line_item.save
