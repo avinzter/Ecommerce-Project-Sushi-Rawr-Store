@@ -2,6 +2,9 @@ SushiRawrStore::Application.routes.draw do
 
   root :to => 'info#index', :via => :get
 
+  
+  match 'search_results' => 'info#search_results', :as => 'search_results', :via => :post
+
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   #devise_for :admin_users, ActiveAdmin::Devise.config, ActiveAdmin::Devise.config
@@ -21,6 +24,7 @@ SushiRawrStore::Application.routes.draw do
 
   match 'review' => 'info#review', :as => 'review'
   #URL - loads review action of the info controller
+
 
 
   # The priority is based upon order of creation:

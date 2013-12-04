@@ -9,6 +9,26 @@ ul#menu {
 
 #menu li {
 	display:inline;
+}
 
+ul#foot {
+	list-style-type: none;
+}
+
+#foot li {
+	display:inline;
+}
+
+header {
+	margin-left: 50px;
+}
+
+html {
+	background-image: image-url("big.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width: 800px;
+	color: #FFF;
+	text-shadow: 5px 5px  5px #000;
 }
 

@@ -1,0 +1,12 @@
+<section>
+	<h3><%= link_to product.product_name, info_product_path(product) %></h3>
+
+	<div>
+		<%= image_tag product.image, :width => '250', :height => '150' %>
+	</div>
+
+	<p><strong>Category: </strong><%= product.category.name %></p>
+	<p><strong>Description: </strong><%= product.description %></p>
+	<p><strong>Price: </strong><%= number_to_currency product_price %></p>
+	<p><strong>Available: </strong><%= product.isAvailable %></p>
+</section>
