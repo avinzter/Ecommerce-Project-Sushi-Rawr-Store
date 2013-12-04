@@ -2,11 +2,16 @@ class InfoController < ApplicationController
 
 	def index
 		@categories = Category.all
+
+		respond_to do |format|
+			format.html
+			format.json { render json: @products }
+		end
 	end
 	#Loads the app/view/info/index.html.erb
 
 	def menu
-		@product = Product.all 
+		@products = Product.all 
 
 		respond_to do |format|
 			format.html
@@ -19,7 +24,7 @@ class InfoController < ApplicationController
 	end
 
 	def search_results
-		@product = Product.where(:name => params[:keywords])
+		@products = Product.where("product_name  LIKE '%#{params[:keywords]}%' AND category_id = #{params[:search_category]}")
 	end
 
 	def about
@@ -32,7 +37,7 @@ class InfoController < ApplicationController
 
 	def reviews
 
-	@customer = Customer.new(params[:id])
+		@customer = Customer.new
 
 	end
 	#Loads the app/view/info/review.html.erb
