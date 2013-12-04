@@ -1,6 +1,12 @@
 <h2>index</h2>
 
-
+<div class="search">
+	<%= form_tag search_results_path do %>
+	<%= text_field_tag :keywords %>
+	<%= select_tag :search_category, options_for_select(@categories.collect { |u| [u.name, u.id] }) %>
+	<%= submit_tag 'Search' %>
+	<% end %>
+</div>
 
 <div class="side_product_list">
 	<h4>Top Favorites/h4>
