@@ -2,8 +2,10 @@ SushiRawrStore::Application.routes.draw do
 
   root :to => 'info#index', :via => :get
 
-  
   match 'search_results' => 'info#search_results', :as => 'search_results', :via => :post
+
+  match 'checkout' => 'info#checkout', :as => 'checkout', :via => :post
+  match 'checkout' => 'info#checkout', :as => 'checkout', :via => :get
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 

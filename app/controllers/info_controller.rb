@@ -24,6 +24,7 @@ class InfoController < ApplicationController
 	end
 
 	def search_results
+		@categories = Category.all
 		@products = Product.where("product_name  LIKE '%#{params[:keywords]}%' AND category_id = #{params[:search_category]}")
 	end
 
@@ -41,5 +42,21 @@ class InfoController < ApplicationController
 
 	end
 	#Loads the app/view/info/review.html.erb
+
+	def checkout
+		session[:line_item_ids] ||= []
+
+		if request.post?
+			products = Product.find(params[:product_id])
+			line_item = Line_item.new
+			line_item.product_id = product.id
+			line_item.quantity = params[:quantity]
+			line_item.price = product.price
+			line_item.save
+			session[:line_item_ids] << line_item.id
+		end
+		@line_items = Line_item.find(session[:line_item_ids])
+
+	end
 
 end

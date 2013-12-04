@@ -10,5 +10,13 @@
 		<p><strong>Description: </strong><%= product.description %></p>
 		<p><strong>Price: </strong><%= number_to_currency product.product_price %></p>
 		<p><strong>Available: </strong><%= product.isAvailable %></p>
+		<div>
+			<%= form_tag checkout_path do %>
+				<%= hidden_field_tag :product_id, product.id %>
+				<% label_tag 'Quantity: '%>
+				<%= text_field_tag :quantity, " ", :size => '1' %>
+				<%= submit_tag 'Add To Cart', :class => 'add_to_cart' %>
+			<% end %>
+		</div>
 	</section>
 <% end %>
