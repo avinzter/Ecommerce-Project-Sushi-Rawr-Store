@@ -3,4 +3,33 @@
 <div class="about">
 	<p>Located in Winnipeg, Sushi Rawr is one of the cheapest all you can eat sushi restaurant in the city. Open since 2000, Sushi Rawr has been serving wide variety of sushi, and other Japanese speacialty cuisine. With over 20 hardworking employees and skilled chefs that provides hight quality serving and best tasting dishes, it is difinitely a great place for susho lovers and first time sushi eaters.
 	</p>
+
+		<div class="form">
+		<%= form_for :customer do |f| %>
+		  <div>
+		    <%= f.label :first_name %> 
+		    <%= f.text_field :first_name %>
+		  </div>
+		  <div>
+		    <%= f.label :last_name %> 
+		    <%= f.text_field :last_name %>
+		  </div>
+		  <div>
+		    <%= f.label :address %> 
+		    <%= f.text_field :address %>
+		  </div>
+		  <div>
+		    <%= f.label :city %> 
+		    <%= f.text_field :city %>
+		  </div>
+		  <div>
+		    <%= f.label :province %>
+		    <%= f.text_field :province %>
+		  </div>
+		  <div>
+		    <%= f.submit 'Sign Up' %>
+		  </div>
+		<% end %>
+
+	</div>
 </div>

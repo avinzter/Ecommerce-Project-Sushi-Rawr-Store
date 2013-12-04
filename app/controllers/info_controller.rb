@@ -11,7 +11,7 @@ class InfoController < ApplicationController
 	#Loads the app/view/info/index.html.erb
 
 	def menu
-		@products = Product.all 
+		@products = Product.order('id') 
 		@categories = Category.all
 
 		respond_to do |format|
@@ -35,6 +35,19 @@ class InfoController < ApplicationController
 	#Loads the app/view/info/about.html.erb
 
 	def contact_us
+		@customer = Customer.new
+
+	end
+
+	def contact 
+		if request.post?
+			@customer = Customer.create(
+				first_name: params[:customer][:first_name],
+				last_name: params[:customer][:last_name],
+				address: params[:customer][:address],
+				city: params[:customer][:city],
+				province_id: params[:customer][:province_id])
+		end
 	end
 	#Loads the app/view/info/contact.html.erb
 
@@ -49,6 +62,7 @@ class InfoController < ApplicationController
 		session[:line_item_ids] ||= []
 
 		if request.post?
+
 			product = Product.find(params[:product_id])
 			line_item = LineItem.new
 			line_item.product_id = params[:product_id]

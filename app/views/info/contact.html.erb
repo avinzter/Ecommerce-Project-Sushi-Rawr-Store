@@ -9,4 +9,36 @@
 		</p>
 	<h4>Location</h4>
 		<iframe src="https://maps.ogogle.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Polo+Park,+Winnipeg,+MB&amp;aq=1&amp;oq=polo+&amp;sll=49.853822,-97.152225&amp;sspn=0.478124,1.259308&amp;ie=UTF8&amp;hq=Polo+Park,+Winnipeg,+MB&amp;t=m&amp;ll=49.881167,-97.32008&amp;spn=0.01438,0.032015&amp;output=embed"></iframe><br /><small><a href="https://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Polo+Park,+Winnipeg,+MB&amp;aq=1&amp;oq=polo+&amp;sll=49.853822,-97.152225&amp;sspn=0.478124,1.259308&amp;ie=UTF8&amp;hq=Polo+Park,+Winnipeg,+MB&amp;t=m&amp;ll=49.881167,-97.32008&amp;spn=0.01438,0.032015" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+	<h2>Review</h2>
+
+	<div class="form">
+		<%= form_for :customer do |f| %>
+		  <div>
+		    <%= f.label :first_name %> 
+		    <%= f.text_field :first_name %>
+		  </div>
+		  <div>
+		    <%= f.label :last_name %> 
+		    <%= f.text_field :last_name %>
+		  </div>
+		  <div>
+		    <%= f.label :address %> 
+		    <%= f.text_field :address %>
+		  </div>
+		  <div>
+		    <%= f.label :city %> 
+		    <%= f.text_field :city %>
+		  </div>
+		  <div>
+		    <%= f.collection_select(:province_id, Province.all, :id, :name) %>
+		    
+		  </div>
+		  <div>
+		    <%= f.submit 'Sign Up' %>
+		  </div>
+		<% end %>
+
+	</div>
+
 </div>

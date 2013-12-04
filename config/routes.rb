@@ -26,7 +26,7 @@ SushiRawrStore::Application.routes.draw do
 
   match 'review' => 'info#review', :as => 'review'
   #URL - loads review action of the info controller
-
+  match 'contact' => 'info#contact', :as=> 'contact', :via => :post
 
 
   # The priority is based upon order of creation:
