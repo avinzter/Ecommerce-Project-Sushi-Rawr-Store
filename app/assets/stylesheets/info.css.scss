@@ -3,40 +3,136 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-ul#menu {
-	list-style-type: none;
-}
-
-#menu li {
-	display:inline;
-}
-
-ul#foot {
-	list-style-type: none;
-}
-
-#foot li {
-	display:inline;
-}
-
 header {
+
 	margin-left: 50px;
+
+	img {
+		-webkit-box-shadow: 0px 0px 8px 3px rgba(245, 217, 255, 0.7);
+	-moz-box-shadow: 0px 0px 8px 3px rgba(245, 217, 255, 0.7);
+	box-shadow: 0px 0px 8px 3px rgba(245, 217, 255, 0.7);
+	}
 }
 
 html {
 	background-image: image-url("big.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	width: 800px;
+	width: 870px;
 	color: #FFF;
+	margin: 0 auto;
+	text-shadow: 5px 5px  5px #000;
+	border: 1px dotted black;
+	background-color: rgba(50, 47, 49, 0.8);
+	padding: 20px;
+	 -webkit-box-shadow: 0px 0px 8px 3px rgba(245, 217, 255, 0.7);
+	-moz-box-shadow: 0px 0px 8px 3px rgba(245, 217, 255, 0.7);
+	box-shadow: 0px 0px 8px 3px rgba(245, 217, 255, 0.7);
+	h1, h2, h3 {
+    font-family: Cambria, Georgia, "Bitstream Charter", serif;
+}
+
+	h1 {
+		float:right;
+		margin-right: 350px;
+		font-size: 30pt;
+	}
+
+	header h3 {
+		float:right;
+		margin-top: -75px;
+		margin-right: 250px;
+		color: red;
+	}
+
+	ul#menu {
+		list-style-type: none;
+		text-align:center;
+		background-color: rgba(7, 7, 7, 0.9);
+		padding: 5px;
+
+		}
+
+		#menu li {
+			display:inline;
+			padding: 10px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+}
+
+
+a {
+	text-decoration:none;
+	font-size: 15pt;
+	color: white;
+}
+
+a:hover {
+	cursor: hand;
+	font-size: 12pt;
+	color: red;
 	text-shadow: 5px 5px  5px #000;
 }
 
-.prod {
-	#products{
-		#product {
-		border: 1 px solid #000;
-		}
+ul#foot {
+	list-style-type: none;
+
+}
+
+#foot li {
+	display:inline;
+
+}
+
+
+div.search {
+	float: right;
+	margin-top: -150px;
+}
+
+div.index_body {
+	float:center;
+	position:relative;
+	margin-top: -210px;
+	img{
+		margin-left: 270px;
+		-webkit-box-shadow: 0px 0px 8px 3px rgba(11, 7, 13, 0.7);
+		-moz-box-shadow: 0px 0px 8px 3px rgba(11, 7, 13, 0.7);
+		box-shadow: 0px 0px 8px 3px rgba(11, 7, 13, 0.7);
 	}
 }
 
+footer {
+	margin-top: 200px;
+	text-align: center;
+	background-color: rgba(7, 7, 7, 0.9);
+	padding: 5px;
+	font-size: 10pt;
+	a {
+		font-size: 10pt;
+	}
+}
+
+h1, h2, h3 {
+    font-family: Cambria, Georgia, "Bitstream Charter", serif;
+}
+
+section {
+
+    margin-left: -20px;
+    margin-top: 30px;
+
+	position:relative;
+    background: black;
+    width: 250px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    min-height: 450px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
+	margin-top: 0;
+       
+}

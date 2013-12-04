@@ -1,7 +1,6 @@
 <h2>Checkout</h2>
 
 <% @line_items.each do |line_item| %>
-	<%= line_item.name %>
-	<%= line_item.quantity %>
-
+	<p><strong>Quantity: </strong><%= line_item.quantity %></p>
+	<p><strong>Price: </strong><%= number_to_currency line_item.price %></p>
 <% end %>
