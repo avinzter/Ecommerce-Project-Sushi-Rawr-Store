@@ -4,7 +4,7 @@ SushiRawrStore::Application.routes.draw do
 
   match 'search_results' => 'info#search_results', :as => 'search_results', :via => :post
 
-  match 'categories/:id' => 'info#category', :as => :categories, :via => :get
+  match 'categories/:id' => 'info#category', :as => :categories, :via => :post, :via => :get
 
   match 'checkout' => 'info#checkout', :as => 'checkout', :via => :post
   match 'checkout' => 'info#checkout', :as => 'checkout', :via => :get

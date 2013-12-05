@@ -33,6 +33,11 @@ class InfoController < ApplicationController
 	def category
 		@categories = Category.all
 		@products = Product.where(:category_id => params[:id])
+
+		respond_to do |format|
+			format.html
+			format.json { render json: @products }
+		end
 	end
 
 	def about
@@ -43,6 +48,7 @@ class InfoController < ApplicationController
 		@customer = Customer.new
 
 	end
+
 
 	def contact 
 		if request.post?
