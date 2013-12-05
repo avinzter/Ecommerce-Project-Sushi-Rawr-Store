@@ -20,12 +20,14 @@
 	<h4>Food Categories</h4>
 		<ul>
 			<% @categories.each do |category| %>
-			  	<li><%= link_to category.name, categories_path(category.id) %></li>
+			  	<li><%= link_to category.name, search_results_path(category.id) %></li>
 			<% end %>
 		</ul>
 	<h4>Sale</h4>
 
 </div>
+
+<% render 'product' %>
 
 <div class="index_body">
   <%= image_tag 'pretty1.jpg', :width => '520' %>

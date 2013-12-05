@@ -30,6 +30,11 @@ class InfoController < ApplicationController
 		@products = Product.where("product_name  LIKE '%#{params[:keywords]}%' AND category_id = #{params[:search_category]}")
 	end
 
+	def category
+		@categories = Category.all
+		@products = Product.where(:category_id => params[:id])
+	end
+
 	def about
 	end
 	#Loads the app/view/info/about.html.erb
